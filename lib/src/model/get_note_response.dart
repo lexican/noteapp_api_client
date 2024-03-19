@@ -112,7 +112,7 @@ class _$GetNoteResponseSerializer implements PrimitiveSerializer<GetNoteResponse
             value,
             specifiedType: const FullType(NoteModel),
           ) as NoteModel;
-          result.data = valueDes;
+          result.data.replace(valueDes);
           break;
         default:
           unhandled.add(key);
