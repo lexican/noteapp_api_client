@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **addNote**
-> GetNoteResponse addNote(createNoteModel)
+> GetNotesResponse addNote(createNoteModel)
 
 Add new note
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetNoteResponse**](GetNoteResponse.md)
+[**GetNotesResponse**](GetNotesResponse.md)
 
 ### Authorization
 

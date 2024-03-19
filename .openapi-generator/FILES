@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 analysis_options.yaml
 doc/BaseResponse.md
@@ -28,10 +27,3 @@ lib/src/model/note_model.dart
 lib/src/model/update_note_model.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/base_response_test.dart
-test/create_note_model_test.dart
-test/get_note_response_test.dart
-test/get_notes_response_test.dart
-test/note_api_test.dart
-test/note_model_test.dart
-test/update_note_model_test.dart

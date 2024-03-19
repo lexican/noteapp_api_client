@@ -34,9 +34,9 @@ class NoteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [GetNoteResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetNotesResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<GetNoteResponse>> addNote({ 
+  Future<Response<GetNotesResponse>> addNote({ 
     CreateNoteModel? createNoteModel,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -86,14 +86,14 @@ class NoteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    GetNoteResponse? _responseData;
+    GetNotesResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(GetNoteResponse),
-      ) as GetNoteResponse;
+        specifiedType: const FullType(GetNotesResponse),
+      ) as GetNotesResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -105,7 +105,7 @@ class NoteApi {
       );
     }
 
-    return Response<GetNoteResponse>(
+    return Response<GetNotesResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
