@@ -8,8 +8,6 @@ part of 'update_note_model.dart';
 
 class _$UpdateNoteModel extends UpdateNoteModel {
   @override
-  final String id;
-  @override
   final String title;
   @override
   final String description;
@@ -17,10 +15,8 @@ class _$UpdateNoteModel extends UpdateNoteModel {
   factory _$UpdateNoteModel([void Function(UpdateNoteModelBuilder)? updates]) =>
       (new UpdateNoteModelBuilder()..update(updates))._build();
 
-  _$UpdateNoteModel._(
-      {required this.id, required this.title, required this.description})
+  _$UpdateNoteModel._({required this.title, required this.description})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'UpdateNoteModel', 'id');
     BuiltValueNullFieldError.checkNotNull(title, r'UpdateNoteModel', 'title');
     BuiltValueNullFieldError.checkNotNull(
         description, r'UpdateNoteModel', 'description');
@@ -38,7 +34,6 @@ class _$UpdateNoteModel extends UpdateNoteModel {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is UpdateNoteModel &&
-        id == other.id &&
         title == other.title &&
         description == other.description;
   }
@@ -46,7 +41,6 @@ class _$UpdateNoteModel extends UpdateNoteModel {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, title.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jf(_$hash);
@@ -56,7 +50,6 @@ class _$UpdateNoteModel extends UpdateNoteModel {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'UpdateNoteModel')
-          ..add('id', id)
           ..add('title', title)
           ..add('description', description))
         .toString();
@@ -66,10 +59,6 @@ class _$UpdateNoteModel extends UpdateNoteModel {
 class UpdateNoteModelBuilder
     implements Builder<UpdateNoteModel, UpdateNoteModelBuilder> {
   _$UpdateNoteModel? _$v;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
 
   String? _title;
   String? get title => _$this._title;
@@ -86,7 +75,6 @@ class UpdateNoteModelBuilder
   UpdateNoteModelBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
       _title = $v.title;
       _description = $v.description;
       _$v = null;
@@ -111,8 +99,6 @@ class UpdateNoteModelBuilder
   _$UpdateNoteModel _build() {
     final _$result = _$v ??
         new _$UpdateNoteModel._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'UpdateNoteModel', 'id'),
             title: BuiltValueNullFieldError.checkNotNull(
                 title, r'UpdateNoteModel', 'title'),
             description: BuiltValueNullFieldError.checkNotNull(
