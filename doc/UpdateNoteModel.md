@@ -8,7 +8,6 @@ import 'package:noteapp_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
 **title** | **String** |  | 
 **description** | **String** |  | 
 

@@ -26,7 +26,7 @@ Add new note
 import 'package:noteapp_api_client/api.dart';
 
 final api = NoteappApiClient().getNoteApi();
-final CreateNoteModel createNoteModel = ; // CreateNoteModel | Add new note
+final CreateNoteModel createNoteModel = Object; // CreateNoteModel | Add new note
 
 try {
     final response = api.addNote(createNoteModel);
@@ -187,7 +187,7 @@ import 'package:noteapp_api_client/api.dart';
 
 final api = NoteappApiClient().getNoteApi();
 final String noteId = noteId_example; // String | Note ID
-final UpdateNoteModel updateNoteModel = ; // UpdateNoteModel | Update new note
+final UpdateNoteModel updateNoteModel = Object; // UpdateNoteModel | Update new note
 
 try {
     final response = api.updateNote(noteId, updateNoteModel);

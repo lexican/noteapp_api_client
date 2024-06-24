@@ -47,7 +47,7 @@ import 'package:noteapp_api_client/noteapp_api_client.dart';
 
 
 final api = NoteappApiClient().getNoteApi();
-final CreateNoteModel createNoteModel = ; // CreateNoteModel | Add new note
+final CreateNoteModel createNoteModel = Object; // CreateNoteModel | Add new note
 
 try {
     final response = await api.addNote(createNoteModel);

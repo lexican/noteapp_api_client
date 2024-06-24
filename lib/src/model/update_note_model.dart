@@ -11,14 +11,10 @@ part 'update_note_model.g.dart';
 /// UpdateNoteModel
 ///
 /// Properties:
-/// * [id] 
 /// * [title] 
 /// * [description] 
 @BuiltValue()
 abstract class UpdateNoteModel implements Built<UpdateNoteModel, UpdateNoteModelBuilder> {
-  @BuiltValueField(wireName: r'id')
-  String get id;
-
   @BuiltValueField(wireName: r'title')
   String get title;
 
@@ -48,11 +44,6 @@ class _$UpdateNoteModelSerializer implements PrimitiveSerializer<UpdateNoteModel
     UpdateNoteModel object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
     yield r'title';
     yield serializers.serialize(
       object.title,
@@ -86,13 +77,6 @@ class _$UpdateNoteModelSerializer implements PrimitiveSerializer<UpdateNoteModel
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.id = valueDes;
-          break;
         case r'title':
           final valueDes = serializers.deserialize(
             value,
